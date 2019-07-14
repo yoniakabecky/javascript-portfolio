@@ -1,0 +1,364 @@
+@import 'variable';
+
+:root {
+	background-color: #eee;
+	font-size: 62.5%;
+  }
+  
+* {
+	box-sizing: border-box;
+	color: $baseFontColor;
+	margin: 0;
+	padding: 0;
+}
+
+main {
+	font-family: 'Josefin Sans', sans-serif;    
+	scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4 {
+	margin-bottom: 1rem;
+}
+
+h1 {
+	font-size: 7.3rem;
+}
+
+h2 {
+	font-size: 6rem;
+}
+
+h3 {
+	font-size: 4.6rem;
+}
+
+h4 {
+	font-size: 3.9rem;
+}
+
+h5 {
+	font-size: 3rem;
+}
+
+h6{
+	font-size: 2.3rem;
+}
+
+p {
+	font-size: 1.7rem;
+}
+
+.red-text {
+	color: $accentColor;
+}
+
+.back-color:nth-child(even) {
+	background: $darkColor;
+	box-shadow: 0.3rem 0.3rem 1rem #333;
+}
+
+.back-color:nth-child(odd) {
+	background: $lightColor;
+	box-shadow: 0.3rem 0.3rem 1rem #333;
+}
+
+
+/* menu */
+.menu {
+	font-size: 1.3rem;
+	margin: 0;
+	position: absolute;
+	display: inline-block;
+	z-index: 10;
+    
+	a {
+		text-decoration: none;
+		color: $baseFontColor;
+	}
+}
+
+#menu1 {
+	color: $accentColor;
+}
+
+.link-top {
+	top: 7vh;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.link-about {
+	top: 50%;
+	left: 7vw;
+	transform: rotate(270deg);
+	transform-origin: 0%;
+}
+
+.link-skills {
+	bottom: 7vh;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.link-contact {
+	top: 50%;
+	right: 7vw;
+	transform: rotate(90deg);
+	transform-origin: 100% 0%;
+}
+
+.arrow {
+	position: absolute;
+	z-index: 10;
+	color: #fff;
+	font-size: 1.5rem;
+}
+
+#up-arrow {
+	display: none;
+	right: 7vw;
+	top: 8vh;
+	-webkit-animation: arrow-up 2s infinite;
+	animation: arrow-up 2s infinite;
+}
+
+#down-arrow{
+	left: 7vw;
+	bottom: 8vh;
+	-webkit-animation: arrow-d 2s infinite;
+	animation: arrow-d 2s infinite;
+}
+
+@-webkit-keyframes arrow-d {
+	0% { 
+		-webkit-transform: translate(0, 0); 
+		opacity: 0; 
+	}
+	50% { 
+		opacity: 1; 
+	}
+	100% {
+		-webkit-transform: translate(0, 0.8rem);
+		opacity: 0;
+	}
+}
+
+@keyframes arrow-d {
+	0% {
+		transform: translate(0, 0);
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		transform: translate(0, 0.8rem);
+		opacity: 0;
+	}
+}
+
+@-webkit-keyframes arrow-up {
+	0% {
+		-webkit-transform: translate(0, 0);
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		-webkit-transform: translate(0, -0.8rem);
+		opacity: 0;
+	}
+}
+
+@keyframes arrow-up {
+	0% {
+		transform: translate(0, 0);
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		transform: translate(0, -0.8rem);
+		opacity: 0;
+	}
+}
+
+
+/* common */
+.container {
+	overflow: auto;
+	scroll-snap-type: y mandatory;
+	height: 100vh;
+	scroll-padding-top: 5vh;
+}
+
+.section {
+	height: 90vh;
+	text-align: center;
+	scroll-snap-align: start;
+	scroll-padding: 40px;
+	margin: 5vh 5vw;
+}
+
+
+/* top page */
+.hero-contents {
+	position: relative;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-family: $fontFred;
+}
+
+.buruburu {
+	display: inline-block;
+	margin: 1.5rem 0; 
+	cursor: pointer;
+}
+
+.buruburu:hover {
+	animation: buruburu 200ms 100;
+}
+
+@keyframes buruburu {
+    0%  {transform: translate(0px, 0px) rotateZ(0deg)}
+    25% {transform: translate(2px, 2px) rotateZ(1deg)}
+    50% {transform: translate(0px, 2px) rotateZ(0deg)}
+    75% {transform: translate(2px, 0px) rotateZ(-1deg)}
+    100% {transform: translate(0px, 0px) rotateZ(0deg)}
+}
+
+
+/* slider */
+#about, #skills, #contact {
+	position: relative;
+	
+	h2 {
+		display: inline-block;
+		margin-top: 40%;
+	}
+}
+
+.slider {
+	position: absolute;
+	height: 70vh;
+	width: 40vw;
+	top: 10vh;
+}
+
+.slider-r {
+	background: rgba(250, 250, 250, 0.4);	
+	right: 5vw;
+}
+
+.slider-l {
+	background: rgba(250, 250, 250, 0.4);
+	left: 5vw;
+}
+
+.description {
+	position: absolute;
+	top: 10vh;
+	width: 36vw;
+	height: 70vh;
+}
+
+
+/* about section */
+#about {
+	h2 {
+		color: #777;
+	}
+	.description {
+		left: 7vw;
+		text-align: left;
+		color: $darkColor;
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(15vw, 1fr));
+	}
+}
+
+.about-me {
+	display: flex;
+	flex-direction: column;
+	padding: 0 2vw;
+
+}
+
+
+/* skills section */
+#skills  {
+	display: flex;
+
+	.description {
+    	right: 5vw;
+		float: right;
+	}
+}
+
+.skill-icon {
+    list-style-type: none;
+    display: block;
+	padding-left: 0;
+		
+	li {
+		float: left;
+		font-size: 2.5rem;
+		margin: 1rem;
+	}
+}
+
+i:hover {
+    opacity: .7;
+}
+
+#myWorkBtn {
+	position: absolute;
+	width: 15rem;
+	height: 4.5rem;
+	line-height: 4.5rem;
+	border: 0.2rem solid #fff;
+	font-size: 1.4rem;
+	background: transparent;
+	border-radius: 2rem .5rem 1rem .5rem / .5rem 2rem .5rem 1.8rem;
+	right: 7vw;
+	bottom: 7vw;
+	color: #fff;
+}
+
+
+/* contact section */
+#contact {
+	display: flex;
+	
+	h2 {
+		color: #777;
+	}
+
+	.description {
+		left: 7vw;
+	}
+}
+ 
+
+/* icons */
+.skill-icon, .social-icons a{
+    list-style-type: none;
+    display: inline-block;
+}
+
+.skill-icon li, .social-icons i , #about i{
+    float: left;
+    font-size: 2.5rem;
+    margin: 1rem;
+}
+
+.skill-icon i:hover {
+    opacity: .7;
+}
