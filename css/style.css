@@ -216,6 +216,23 @@ p {
   margin: 5vh 5vw;
 }
 
+/* icons */
+.skill-icon, .social-icons a {
+  list-style-type: none;
+  display: inline-block;
+}
+
+.skill-icon li, .social-icons i {
+  float: left;
+  font-size: 4rem;
+  margin: 0 1rem;
+  color: #555;
+}
+
+.skill-icon i:hover, .social-icons i:hover {
+  opacity: .7;
+}
+
 /* top page */
 .hero-contents {
   position: relative;
@@ -290,7 +307,7 @@ p {
 
 #about h2, #skills h2, #contact h2 {
   display: inline-block;
-  margin-top: 40%;
+  line-height: 70vh;
 }
 
 .slider {
@@ -325,11 +342,6 @@ p {
 #about .description {
   left: 7vw;
   text-align: left;
-  color: #333;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (minmax(15vw, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(15vw, 1fr));
 }
 
 .about-me {
@@ -341,6 +353,20 @@ p {
       -ms-flex-direction: column;
           flex-direction: column;
   padding: 0 2vw;
+  margin: 5rem 0;
+}
+
+.about-me i, .about-me p, .about-me h6 {
+  color: #555;
+}
+
+.about-me p {
+  padding: 1rem 0;
+}
+
+.about-me i {
+  line-height: 1.5rem;
+  font-size: 3rem;
 }
 
 /* skills section */
@@ -353,22 +379,20 @@ p {
 #skills .description {
   right: 5vw;
   float: right;
+  text-align: center;
 }
 
 .skill-icon {
   list-style-type: none;
   display: block;
   padding-left: 0;
+  line-height: 70vh;
 }
 
 .skill-icon li {
   float: left;
-  font-size: 2.5rem;
+  font-size: 4rem;
   margin: 1rem;
-}
-
-i:hover {
-  opacity: .7;
 }
 
 #myWorkBtn {
@@ -400,19 +424,7 @@ i:hover {
   left: 7vw;
 }
 
-/* icons */
-.skill-icon, .social-icons a {
-  list-style-type: none;
-  display: inline-block;
-}
-
-.skill-icon li, .social-icons i, #about i {
-  float: left;
-  font-size: 2.5rem;
-  margin: 1rem;
-}
-
-.skill-icon i:hover {
-  opacity: .7;
+#contact .social-icons {
+  line-height: 70vh;
 }
 /*# sourceMappingURL=style.css.map */
